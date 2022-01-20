@@ -1,0 +1,163 @@
+Delivered-To: bjornjobb@gmail.com
+Received: by 2002:a05:7000:4d56:0:0:0:0 with SMTP id f22csp3033915mar;
+        Tue, 18 Jan 2022 01:37:59 -0800 (PST)
+X-Received: by 2002:a5e:c319:: with SMTP id a25mr1842579iok.94.1642498678979;
+        Tue, 18 Jan 2022 01:37:58 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1642498678; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Bq7n5CTo1xLn0pTr3lpp4MZKkx5g1HQCrsu1iuubh7YoFQov7t8WecMLpo6SRW68HF
+         9qB9FniwihpdSd0bTx5GvMjdfp5DorTisJWvG5MWCupzPV2yKWlkESA7bR0bmV1cg3p8
+         feB40O7r8lQOeBl2K9a/94ITEqQg3F82KkuhT9SAD2595EPJPdowUtVevzuG64vNFX7z
+         5jer3R/d9wH5ebC2sd2s7ZHrKeGsRLutKlXxbzo73cSQXUyTGAj+mmdfPkn0pDMWgwTu
+         4qW02bO2vxByoA/Ye2GSJnlC6ksId28J17xy9jwiOIJhi7Pey9eF0OEWqHYLo2/vwyz/
+         O2kg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=IJ9uABJi+Z+cHSHMt30VL9HATfYejVDTGkH+8en1cmQ=;
+        b=euzyoCVhb5GjBImT5fwpeLpbsxcIFHYcI6jzZKciFHvSdBUKDolh+kVmlCHgZCFwFT
+         WUyG8P3htqbtUDnQ7csYIGpwT6T/SQmJTxC+4boc31Qa7phR0TovxP2EQRb/4HY9wfR6
+         NCkyeYAMcyANY8shITc/oA/fBUdnPrAltWOJV8MaKOlnmnDoJevhshNCAPq9p1AQy8jv
+         U9lMOLHr3LZMXpqE06wcFi3OsxEEOPozUAIOxKQEKoTPS9H7Sv2h+2Ov/OsLUxPEtNhA
+         8t2xxBHkKo8diFmIyqSTBG2bgoSPqhpysDPwTZZTXPrlK3Cbgq+HLRt5CKHkU/FMraoo
+         gybA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20210112 header.b=ctO5T4fT;
+       spf=pass (google.com: domain of pcfernandesdasilva@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=pcfernandesdasilva@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <pcfernandesdasilva@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id i13sor5492899ils.148.2022.01.18.01.37.58
+        for <bjornjobb@gmail.com>
+        (Google Transport Security);
+        Tue, 18 Jan 2022 01:37:58 -0800 (PST)
+Received-SPF: pass (google.com: domain of pcfernandesdasilva@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20210112 header.b=ctO5T4fT;
+       spf=pass (google.com: domain of pcfernandesdasilva@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=pcfernandesdasilva@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20210112;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=IJ9uABJi+Z+cHSHMt30VL9HATfYejVDTGkH+8en1cmQ=;
+        b=ctO5T4fTrt9LOK3FM7eolNzM3vOYkk5npzIS7+XqBaszvqZH4mwkfDLCf7UbfIez5C
+         oO1XlosiVD8IuGXWrr4RNNjOO+NJwLheBRIoNZ0xxvFj/F+j5/dsSj7LuqW8CTJgbket
+         tUrJKQrjrCaGFVs3e05sJ1DsntYhA9WlMQpO9yIgcBHJNjZRWk6iM810ZGZv1hpulsHh
+         gyy+tJIzwc0vERQPtJMibz8NvPAtTh9qXMSJBRrJSV4SBPjMKpIfBn9Raw0qNrI4elYE
+         hI+fSdJPQ/mX0XAsvmpMEEEf26PAGqPvZe2nGhbaXl7M2ahJuEO2e32p4DYuoYWvnw7W
+         daBg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=IJ9uABJi+Z+cHSHMt30VL9HATfYejVDTGkH+8en1cmQ=;
+        b=s4o7ZCgkdceLlWPVMaZlx7xLuKdJRXNspBQYTGPyPq2/M5a51ynm+ZMvEHTetG9nYt
+         2d/tqHm9SQjjKfFt+W+7m/cmVFG6PNORDPgCVjtTBqCyIvzrWkvY/uEcSmfZztgDG1pW
+         CBYRtnGCvozGkkYaz7cgKcEh8Vbv5QrG1Pf2Dwt1vrW20YrbY9zHKlyNAJ147iFscUMc
+         4cnVDJnbpVyQQCKoDxVb/2x+HG3hD17670ACuAtedxX3xI/n6zhgNlZo9c3ZkiXY5VwT
+         gIWyqucw6NQ+GECIGTG2kLeAA9SRcbqDUOYmDKl9QrnP3JZvfOXY9huZQzvtP4YIXTZp
+         w7lQ==
+X-Gm-Message-State: AOAM5305bVn46GiPZREwC/XhE2J/UTstTkFQYcjlM8hrIrvBm6u3nvJ5
+	Uj3Me5/zkzSWVTqzw8HwdR4QAzUV27GDuKpvja1lBVu71uyddQ==
+X-Google-Smtp-Source: ABdhPJyhQMzve4/YIgK0zpg5eNdogTy8HpJJcbHnC3z7MyKagxhUYKk0x5KKWsJEVfw1yHy91LQqnV/NzBWEXzJXRUI=
+X-Received: by 2002:a92:c261:: with SMTP id h1mr13203300ild.320.1642498678419;
+ Tue, 18 Jan 2022 01:37:58 -0800 (PST)
+MIME-Version: 1.0
+From: =?UTF-8?Q?Paulo_C=C3=A9sar_Silva?= <pcfernandesdasilva@gmail.com>
+Date: Tue, 18 Jan 2022 09:37:42 +0000
+Message-ID: <CAO0bvEMMq_a9HFiUGKDxRRPRm-WbgaNHygiRk+GC3oXKpAnNTA@mail.gmail.com>
+Subject: Construction of pTA6_TEF1_linker_yEGFP_RPL22A (KanR)
+To: =?UTF-8?Q?Bj=C3=B6rn_Johansson?= <bjornjobb@gmail.com>
+Content-Type: multipart/alternative; boundary="00000000000045759405d5d8060c"
+
+--00000000000045759405d5d8060c
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+*Construction of pTA1_TEF1_linker_yEGFP_RPL22A*
+backbone: pTA1 (LEU2)
+all the inserts were amplified from pYPKa
+
+insert 1:
+Z_TEF1 (pYPKa_Z_TEF1)
+>577
+>1563
+
+insert 2:
+linker_GFP (GFP from pUG35, cloned in pYPKa using primers 1565/317)
+>1565
+>467
+
+insert 3:
+E_RPL22A (pYPKa_E_RPL22A)
+>568
+>578
+
+*Construction of pTA6_TEF1_linker_yEGFP_RPL22A*
+
+Digestion of pTA1_TEF1_linker_yEGFP_RPL22A:
+
+enzyme: Eco32I
+this enzyme cuts only once in this plasmid and the restriction site is
+within the LEU2 gene
+
+digestion mix (20 =CE=BCL)
+H2O 14.5
+speedy 10x buff 2
+circular DNA 2
+speedy Eco32I 1
+FastAP 0.5
+inactivation 80 =C2=B0C for 20 minutes
+
+Amplification of kanMX6:
+template pFA6a-GFP(S65T)-kanMX6
+location =C2=B5716 Bj=C3=B6rn2 17
+primers 1349, 1350
+product 1417
+
+
+
+--=20
+Paulo C=C3=A9sar Silva, PhD student
+Department of Biology, University of Minho
+Campus de Gualtar, 4710-057 Braga, Portugal
+ResearchGate <https://www.researchgate.net/profile/Paulo-Silva-13> |
+https://metabolicengineeringgroupcbma.github.io
+
+--00000000000045759405d5d8060c
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-family:tahoma,s=
+ans-serif"><b>Construction of pTA1_TEF1_linker_yEGFP_RPL22A</b></div><div c=
+lass=3D"gmail_default" style=3D"font-family:tahoma,sans-serif"><div>backbon=
+e: pTA1 (LEU2)</div><div>all the inserts were amplified from pYPKa</div><di=
+v>=C2=A0</div><div>insert 1:</div><div>Z_TEF1 (pYPKa_Z_TEF1)</div><div>&gt;=
+577</div><div>&gt;1563</div><div>=C2=A0</div><div>insert 2:</div><div>linke=
+r_GFP (GFP from pUG35, cloned in pYPKa using primers 1565/317)</div><div>&g=
+t;1565</div><div>&gt;467</div><div>=C2=A0</div><div>insert 3:</div><div>E_R=
+PL22A (pYPKa_E_RPL22A)</div><div>&gt;568</div><div>&gt;578</div><div><br></=
+div><div><b>Construction of pTA6_TEF1_linker_yEGFP_RPL22A</b><br></div><div=
+><div><br></div><div>Digestion of <span class=3D"gmail-internalLink gmail-i=
+nternalLink--isLink" title=3D"Name: pTA1_TEF1_linker_yEGFP_RPL22A"><span cl=
+ass=3D"gmail-internalLink-content"><span class=3D"gmail-internalLink-name">=
+pTA1_TEF1_linker_yEGFP_RPL22A:</span></span></span></div><div>=C2=A0</div><=
+div>enzyme: Eco32I</div><div>this enzyme cuts only once in this plasmid and=
+ the restriction site is within the LEU2 gene</div><div>=C2=A0</div><div>di=
+gestion mix (20 =CE=BCL)</div><div>H2O			14.5</div><div>speedy 10x buff	2</=
+div><div>circular DNA		2</div><div>speedy Eco32I	1</div><div>FastAP			0.5</=
+div><div>inactivation		80 =C2=B0C for 20 minutes</div><div>=C2=A0</div><div=
+>Amplification of kanMX6:</div><div>template	pFA6a-GFP(S65T)-kanMX6</div><d=
+iv>location		=C2=B5716	Bj=C3=B6rn2	17</div><div>primers		1349, 1350</div><d=
+iv>product		1417</div><div>=C2=A0</div></div></div><div class=3D"gmail_defa=
+ult" style=3D"font-family:tahoma,sans-serif"><br></div><div><br></div>-- <b=
+r><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_signat=
+ure"><div dir=3D"ltr"><font face=3D"tahoma, sans-serif">Paulo C=C3=A9sar Si=
+lva, PhD student<br></font><div><font face=3D"tahoma, sans-serif" size=3D"1=
+">Department of Biology, University of Minho</font></div><div><font face=3D=
+"tahoma, sans-serif" size=3D"1">Campus de Gualtar, 4710-057 Braga, Portugal=
+</font></div><div><font face=3D"tahoma, sans-serif" size=3D"1"><a href=3D"h=
+ttps://www.researchgate.net/profile/Paulo-Silva-13" target=3D"_blank">Resea=
+rchGate</a>=C2=A0|=C2=A0<a href=3D"https://metabolicengineeringgroupcbma.gi=
+thub.io" target=3D"_blank">https://metabolicengineeringgroupcbma.github.io<=
+/a></font><br></div></div></div></div>
+
+--00000000000045759405d5d8060c--
